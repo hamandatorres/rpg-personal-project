@@ -15,5 +15,16 @@ module.exports = {
     await db.topics.delete_topic(topic_id)
 
     res.status(200).send('Topic Deleted')
-  }
+  },
+  getTopics: async (req, res) => {
+    if (req.query.search) {
+      console.log('Found Topics')
+      const filteredTopics = await db.topics.find_topics(req.query.search)
+      res.status(200).send(filteredTopics)
+    } else {
+      const db = req.app.get('db')
+      const topics = await db.topics.get_all_topics();
+      res.status(200).send(topics)
+    }
+  },
 }

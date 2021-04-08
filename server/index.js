@@ -40,9 +40,11 @@ app.delete('/api/skills/:skill_id', skillsCtrl.deleteSkills)
 //topic
 app.post('/api/topics', topicCtrl.createTopic)
 app.delete('/api/topics/:topic_id', topicCtrl.deleteTopic)
+app.get('/api/topics', topicCtrl.getTopics)
 
 //post
 app.post('/api/post', postCtrl.createPost)
+app.get('/api/posts', postCtrl.findPost)
 
 massive({
   connectionString:DB_STRING,

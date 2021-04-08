@@ -2,7 +2,7 @@ module.exports = {
   createSkills: async (req, res) => {
     const db = req.app.get('db')
     const { strength, speed, endurance, reasoning, insight, personality } = req.body
-    await db.skills.create_skills(strength, speed, endurance, reasoning, insight, personality);
+    await db.skills.create_skills( strength, speed, endurance, reasoning, insight, personality);
 
     res.status(200).send("Mad Skillz")
   },
