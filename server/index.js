@@ -4,6 +4,11 @@ const express = require('express');
 const app = express();
 const massive = require('massive');
 const session = require('express-session');
+const authCtrl = require('./controllers/authController')
+const characterCtrl = require('./controllers/userCharacterController');
+const topicCtrl = require('./controllers/topicController')
+const postCtrl = require('./controllers/postController')
+const skillsCtrl = require('./controllers/skillsController')
 const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
 
 app.use(express.json());
@@ -18,7 +23,26 @@ app.use(
     }
   })
 )
+// auth
+app.post('/auth/register', authCtrl.register);
+app.post('/auth/login', authCtrl.login);
+app.delete('/auth/logout', authCtrl.logout);
+app.get('/auth/session', authCtrl.getSession);
 
+//characters
+app.post('/api/characters', characterCtrl.addCharacter);
+app.delete('/api/characters/:character_id', characterCtrl.deleteCharacter);
+
+//Skills
+app.post('/api/skills', skillsCtrl.createSkills)
+app.delete('/api/skills/:skill_id', skillsCtrl.deleteSkills)
+
+//topic
+app.post('/api/topics', topicCtrl.createTopic)
+app.delete('/api/topics/:topic_id', topicCtrl.deleteTopic)
+
+//post
+app.post('/api/post', postCtrl.createPost)
 
 massive({
   connectionString:DB_STRING,
