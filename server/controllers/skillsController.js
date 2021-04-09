@@ -4,7 +4,7 @@ module.exports = {
     const { strength, speed, endurance, reasoning, insight, personality } = req.body
     await db.skills.create_skills( strength, speed, endurance, reasoning, insight, personality);
 
-    res.status(200).send("Mad Skillz")
+    res.status(200).send("You have added mad skills")
   },
   deleteSkills: async (req, res) => {
     const db = req.app.get('db')

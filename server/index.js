@@ -30,7 +30,7 @@ app.delete('/auth/logout', authCtrl.logout);
 app.get('/auth/session', authCtrl.getSession);
 
 //characters
-app.post('/api/characters', characterCtrl.addCharacter);
+app.post('/api/characters', characterCtrl.createCharacter);
 app.delete('/api/characters/:character_id', characterCtrl.deleteCharacter);
 
 //Skills
@@ -40,11 +40,15 @@ app.delete('/api/skills/:skill_id', skillsCtrl.deleteSkills)
 //topic
 app.post('/api/topics', topicCtrl.createTopic)
 app.delete('/api/topics/:topic_id', topicCtrl.deleteTopic)
-app.get('/api/topics', topicCtrl.getTopics)
+app.get('/api/topics', topicCtrl.getAllTopics)
+app.get('/api/topics/:topic_id', topicCtrl.getSingleTopicId)
 
 //post
 app.post('/api/post', postCtrl.createPost)
-app.get('/api/posts', postCtrl.findPost)
+app.get('/api/posts', postCtrl.getAllPosts)
+app.get('/api/posts/:post_id', postCtrl.getSinglePostId)
+app.delete('/api/posts/:post_id', postCtrl.deletePost)
+
 
 massive({
   connectionString:DB_STRING,

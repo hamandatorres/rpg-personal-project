@@ -14,9 +14,15 @@ module.exports = {
     const { topic_id } = req.params;
     await db.topics.delete_topic(topic_id)
 
-    res.status(200).send('Topic Deleted')
+    res.status(200).send(`Topic on index ${topic_id} has been deleted`)
   },
-  getTopics: async (req, res) => {
+  getSingleTopicId: async (req, res) => {
+    const db = req.app.get('db')
+    const { topic_id } = req.params;
+    let topic = await db.topics.find_topics(topic_id)
+    res.status(200).send(topic)
+  },
+  getAllTopics: async (req, res) => {
     if (req.query.search) {
       console.log('Found Topics')
       const filteredTopics = await db.topics.find_topics(req.query.search)
@@ -26,5 +32,5 @@ module.exports = {
       const topics = await db.topics.get_all_topics();
       res.status(200).send(topics)
     }
-  },
+  }
 }

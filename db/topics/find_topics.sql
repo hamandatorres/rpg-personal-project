@@ -1,2 +1,2 @@
 SELECT * FROM usertopic
-WHERE usertopic ILIKE `%`$1`%`;
+WHERE topic_id = $1;

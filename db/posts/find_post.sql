@@ -1,2 +1,2 @@
 SELECT * FROM userpost
-WHERE userpost ILIKE `%`$1`%`;
+WHERE post_id = $1;

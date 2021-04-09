@@ -1,4 +1,4 @@
 INSERT INTO userpost
-(user_id, topic_id, body, creator)
+(user_id, body, creator)
 VALUES
-($1, $2, $3, current_date);
+($1, $2, current_date);

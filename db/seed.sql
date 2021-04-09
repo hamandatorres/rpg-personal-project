@@ -15,7 +15,7 @@ create table userCharacter (
 );
 
 create table characterskill (
-	skill_id int primary key references usercharacter(skill_id) on delete cascade,
+	skill_id serial primary key references usercharacter(skill_id) on delete cascade,
 	strength int,
 	speed int,
 	endurance int,
@@ -42,5 +42,5 @@ create table userpost (
 	user_id int references users(user_id),
 	body text not null,
 	creator timestamp,
-	topic_id int unique references usertopic(topic_id)
+	topic_id serial references usertopic(topic_id) on delete cascade
 );
