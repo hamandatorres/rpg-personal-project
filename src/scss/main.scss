@@ -1,0 +1,51 @@
+@import './1-helpers/variables';
+@import './2-basics/resets';
+@import './3-layout/navbar'
+
+
+
+
+
+
+// @function weight($weight-name) {
+//   @return map-get($font-weight, $weight-name );
+// }
+
+// @mixin flexCenter {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin theme($light-theme: true) {
+//   @if $light-theme {
+//     background: lighten($primary-color, 100%);
+//     color: darken($text-color, 100%);
+//   }
+// }
+
+// @mixin mobile {
+//   @media (max-width: $mobile) {
+//     @content;
+//   }
+// }
+
+// body {
+//   background: $primary-color;
+// }
+
+// .main {
+//   @include flexCenter;
+//   @include mobile {
+//     flex-direction: column;
+//   }
+// }
+
+// .header {
+//   width: 80%;
+//   margin: 0 auto;
+//   color: $text-color;
+// }
+// .light {
+//   @include theme($light-theme: true);
+// }
