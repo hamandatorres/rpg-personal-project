@@ -16,12 +16,13 @@ body {
 }
 
 .brand-title {
-  font-size: 1.5rem;
+  font-family: $primary-font;
   margin: .5rem;
 }
 
 .navbar-links {
   height: 100%;
+  font-family: $primary-font;
 }
 
 .navbar-links ul {
@@ -42,18 +43,18 @@ body {
 }
 
 .navbar-links li:hover {
-  background-color: #555;
+  background-color: white;
 }
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
+  top: .50rem;
   right: 1rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 21px;
+  height: 15px;
 }
 
 .toggle-button .bar {
@@ -63,7 +64,7 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -76,6 +77,8 @@ body {
   .navbar-links {
       display: none;
       width: 100%;
+      text-align: center;
+      font-family: $primary-font;
   }
 
   .navbar-links ul {

@@ -1,0 +1,32 @@
+
+.front-page {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.welcome-message {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding: 10px;
+  // border: 2px solid black;
+  
+
+}
+.welcome-message a {
+  font-family: $primary-font;
+  font-size: larger;
+}
+.input-boxes {
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+}
+.login-input {
+  margin: 10px;
+}
+
+.links {
+  padding: 10px;
+}

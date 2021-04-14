@@ -1,11 +1,24 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   margin: 0%;
   padding: 0%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 * {
@@ -34,12 +47,13 @@ body {
 }
 
 .brand-title {
-  font-size: 1.5rem;
+  font-family: "Press Start 2P", cursive;
   margin: .5rem;
 }
 
 .navbar-links {
   height: 100%;
+  font-family: "Press Start 2P", cursive;
 }
 
 .navbar-links ul {
@@ -62,12 +76,12 @@ body {
 }
 
 .navbar-links li:hover {
-  background-color: #555;
+  background-color: white;
 }
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
+  top: .50rem;
   right: 1rem;
   display: none;
   -webkit-box-orient: vertical;
@@ -78,7 +92,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 30px;
-  height: 21px;
+  height: 15px;
 }
 
 .toggle-button .bar {
@@ -88,7 +102,7 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .navbar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -106,6 +120,8 @@ body {
   .navbar-links {
     display: none;
     width: 100%;
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
   }
   .navbar-links ul {
     width: 100%;
@@ -125,5 +141,48 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.front-page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome-message {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding: 10px;
+}
+
+.welcome-message a {
+  font-family: "Press Start 2P", cursive;
+  font-size: larger;
+}
+
+.input-boxes {
+  font-family: "Press Start 2P", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-input {
+  margin: 10px;
+}
+
+.links {
+  padding: 10px;
 }
 /*# sourceMappingURL=main.css.map */
