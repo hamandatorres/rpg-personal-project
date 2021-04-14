@@ -2,24 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Header = props => {
-  const toggleButton = document.getElementsByClassName('toggle-button')[0]
-  const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-  const Toggle = () => {
-  toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
-    })
-  }
+const Header = () => {
+  const [click, setClick] = useState(true)
+  const handleClick = () => setClick(!click)
+  
   return (
     <body>
     <nav className="navbar">
       <div className="brand-title">RPG</div>
-      <div onClick={Toggle()} className="toggle-button" >
+      <a onClick={handleClick} className="toggle-button" >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
-      </div>
-      <div class="navbar-links">
+      </a>
+      <div className={
+      click ?
+      "navbar-links-closed" :
+      "navbar-links navbar-links-open" }>
         <ul>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links">Login</Link>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links">Register</Link>
