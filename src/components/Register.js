@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, addUser } from '../redux/userSlice';
+import User from './User';
+import { selectUser } from '../redux/userSlice';
 
 
 
-
-const Auth = () =>  {
+const Register = () =>  {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  
+  const user = useSelector(selectUser);
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   
   dispatch(
     login({
       username: username,
@@ -41,11 +44,10 @@ const Auth = () =>  {
     placeholder="Password"
     />
     <button 
-    className="enter-button"
-    >Login</button>
+    className="enter-button">Register</button>
     </form>
     </div>
   )
 };
 
-export default Auth
+export default Register;

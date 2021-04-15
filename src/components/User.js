@@ -13,4 +13,4 @@ const User = props => {
   )
 }
 
-export default User
+export default User;

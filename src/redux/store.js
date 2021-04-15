@@ -1,6 +1,10 @@
-import { createStore } from 'redux';
-import characterReducer from './characterReducer';
+import { configureStore } from '@reduxjs/toolkit';
+import characterReducer from './characterSlice';
+import userReducer from './userSlice';
 
-let store = createStore(characterReducer)
-
-export default store
+export default configureStore({
+  reducer: {
+    character: characterReducer,
+    user: userReducer,
+  },
+})

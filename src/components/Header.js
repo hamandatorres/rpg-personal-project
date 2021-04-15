@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   const [click, setClick] = useState(true)
   const handleClick = () => setClick(!click)
-  
   return (
     <body>
     <nav className="navbar">
@@ -20,10 +19,16 @@ const Header = () => {
       "navbar-links-closed" :
       "navbar-links navbar-links-open" }>
         <ul>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links">Login</Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links">Register</Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/topics" className="links">Topics</Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links">Logout</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links" 
+          >Login</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/register" className="links">Register</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/topic" className="links">Topics</Link>
+          <Link 
+          style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" 
+          className="links"
+          >
+            Logout
+            </Link>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" className="links">Profile</Link>
         </ul>
       </div>
