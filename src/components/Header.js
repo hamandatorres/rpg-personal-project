@@ -19,17 +19,23 @@ const Header = () => {
       "navbar-links-closed" :
       "navbar-links navbar-links-open" }>
         <ul>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" className="links" 
-          >Login</Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/register" className="links">Register</Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/topic" className="links">Topics</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" 
+          className="links login" 
+          
+          >Login
+          {/* <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" className="links">Profile</Link> */}
+          </Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" 
+          className="links profile"
+          onClick={handleClick}
+          >Profile</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/register" className="links register">Register</Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/topic" className="links topics">Topics</Link>
           <Link 
           style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" 
-          className="links"
-          >
-            Logout
-            </Link>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" className="links">Profile</Link>
+          className="links logout"
+          >Logout</Link>
+          
         </ul>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 .enter-button {
+  width: 30%;
   font-family: $primary-font;
   font-size: 12px; 
   line-height: 12px; 
@@ -10,4 +11,5 @@
   font-style: normal; font-variant: normal; 
   text-transform: none;
   display: inline-block;
+  @include hover-lift;
 }

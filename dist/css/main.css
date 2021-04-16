@@ -26,11 +26,14 @@ a:active {
 }
 
 .navbar {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: fixed;
+  top: 0%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -39,6 +42,7 @@ a:active {
           align-items: center;
   background-color: #333;
   color: white;
+  z-index: 10;
 }
 
 .brand-title {
@@ -151,10 +155,10 @@ a:active {
 }
 
 .front-page {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  border: 2px solid blue;
+  top: 10%;
+  display: inline-block;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -163,10 +167,12 @@ a:active {
 }
 
 .welcome-message {
-  height: 100%;
+  height: 50%;
   width: 50%;
   margin: 0;
   padding: 10px;
+  float: left;
+  border: 2px solid black;
 }
 
 .welcome-message a {
@@ -187,13 +193,47 @@ a:active {
 
 .login-input {
   margin: 10px;
+  width: 30%;
 }
 
 .links {
   padding: 10px;
 }
 
+@media (max-width: 500px) {
+  .front-page {
+    top: 5%;
+    display: block;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .welcome-message {
+    display: block;
+    width: 100%;
+    float: none;
+    border: 2px solid black;
+  }
+  .input-boxes {
+    height: 50%;
+    font-family: "Press Start 2P", cursive;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 2px solid black;
+  }
+  .login-input {
+    display: block;
+    margin: 10px;
+  }
+}
+
 .enter-button {
+  width: 30%;
   font-family: "Press Start 2P", cursive;
   font-size: 12px;
   line-height: 12px;
@@ -206,6 +246,34 @@ a:active {
   font-variant: normal;
   text-transform: none;
   display: inline-block;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  -webkit-box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.enter-button::after {
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1.25em 0 rgba(0, 0, 0, 0.4);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  opacity: 0;
+}
+
+.enter-button:hover, .enter-button:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.enter-button:hover::after, .enter-button:focus::after {
+  opacity: 1;
 }
 
 .topic-page {
