@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, addUser } from '../redux/userSlice';
-import User from './User';
 import { selectUser } from '../redux/userSlice';
 
 

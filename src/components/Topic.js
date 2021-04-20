@@ -8,9 +8,10 @@ const Topic = () => {
     <div className="topic-section">
     <div className="topic-title">This is a Topic's title
     <p className="topic-text">This is the text
-    </p></div>
+    </p> 
     </div>
-    <Character />
+    </div>
+ 
     </div>
   )
 }

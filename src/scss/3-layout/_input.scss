@@ -3,7 +3,7 @@
   position:absolute;
   border: 2px solid blue;
   top: 10%;
-  // height: 100vh;
+
   display: inline-block;
   justify-content: space-around;
   align-items: center;
@@ -26,7 +26,7 @@
   font-family: $primary-font;
   display: flex;
   flex-direction: column;
-  // width: 30%;
+
 }
 .login-input {
   margin: 10px;

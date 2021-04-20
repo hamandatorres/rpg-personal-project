@@ -1,21 +1,14 @@
 //mobile
+@media (max-width: 500px) {
 .topic-page {
+  margin-top: 30px;
   height: 100vh;
   border: 2px solid black; 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position:static;
 }
 .topic-section {
-  position: relative;
-
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 50%;
-  border: 2px solid black;
+  flex-direction: column
 
 }
 .topic-title {
@@ -26,13 +19,13 @@
   border: 2px solid black;
 }
 .topic-text {
-  position: relative;
   margin: 0%;
   padding: 0%;
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 100%;
   border: 2px solid black;
 
+}
 }
 
 

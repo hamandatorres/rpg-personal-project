@@ -1,15 +1,15 @@
 import React from 'react';
-import Form from './Form'
+import CharacterDisplay from './CharacterDisplay'
 import Character from './Character'
 
 
-const User = props => {
+const User = () => {
   return (
-    <>
-    <h1>User</h1>
-    <Form />
+    <div className="profile-page">
+    <a className="profile-title">User</a>
+    <CharacterDisplay/>
     <Character />
-    </>
+    </div>
   )
 }
 

@@ -20,11 +20,7 @@ const Header = () => {
       "navbar-links navbar-links-open" }>
         <ul>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/" 
-          className="links login" 
-          
-          >Login
-          {/* <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" className="links">Profile</Link> */}
-          </Link>
+          className="links login" >Login</Link>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/user" 
           className="links profile"
           onClick={handleClick}

@@ -1,0 +1,34 @@
+//mobile
+@media (max-width: 500px) {
+.character-display {
+  font-family: $primary-font;
+  border:  2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 20vh;
+  flex-grow: 0;
+}
+.character-display-title {
+  margin: 0%;
+  padding: 0%;
+  height: 20%;
+  width: 100%;
+  border:  2px solid black;
+
+}
+.character-list {
+  border:  2px solid black;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 80%;
+}
+}
+
+//ipad
+
+//desktop

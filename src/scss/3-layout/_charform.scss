@@ -1,0 +1,41 @@
+@media (max-width: 500px) {
+.character-page {
+  padding: 0%;
+  margin: 0%;
+  font-family: $primary-font;
+  height: 300px;
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction:column;
+
+}
+.h2-characters {
+  margin: 0%;
+
+  font-family: $primary-font;
+  border: 2px solid black;
+  text-align: center;
+}
+.character-form {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+
+}
+
+.box {
+  
+  width: 40%;
+  margin: 5px;
+}
+.age {
+  width: 10%;
+}
+}
+
+//ipad
+
+
+
+//desktop

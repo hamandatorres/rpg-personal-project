@@ -1,8 +1,10 @@
+
 //ipad
 
 //desktop
 .links {
   font-family: $primary-font;
+  
   
 }
 .navbar {
@@ -25,6 +27,7 @@
 }
 
 .navbar-links {
+  
   height: 100%;
   font-family: $primary-font;
 }
@@ -38,7 +41,7 @@
 
 .navbar-links li {
   list-style: none;
-
+  
 }
 
 .navbar-links li a {
@@ -90,26 +93,24 @@
     text-align: center;
     font-family: $primary-font;
   
-  }
+ }
   .navbar-links-closed {
     display: none;
   }
 
 
-  .navbar-links ul {
+ .navbar-links ul {
       width: 100%;
       flex-direction: column;
   }
-
   .navbar-links ul li {
       text-align: center;
   }
-
   .navbar-links ul li a {
       padding: .5rem 1rem;
   }
-
-  .navbar-links.active {
+  .navbar-links .active {
       display: flex;
   }
+
 }
