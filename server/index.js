@@ -9,9 +9,20 @@ const characterCtrl = require('./controllers/userCharacterController');
 const topicCtrl = require('./controllers/topicController')
 const postCtrl = require('./controllers/postController')
 const skillsCtrl = require('./controllers/skillsController')
+
 const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
 
+
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  if(req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, MATCH, DELETE, GET')
+    return res.status(200).json({})
+  }
+})
 
 app.use(
   session({

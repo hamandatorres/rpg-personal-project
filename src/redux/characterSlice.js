@@ -8,7 +8,7 @@ export const characterSlice = createSlice({
     name: '',
     race: '',
     job: '',
-    age: 0 
+    age: null, 
   }
   },
   reducers: {

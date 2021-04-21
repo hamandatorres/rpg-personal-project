@@ -1,10 +1,13 @@
 //mobile
 @media (max-width: 500px) {
 .topic-page {
-  margin-top: 30px;
-  height: 100vh;
-  border: 2px solid black; 
-  display: flex;
+  // top: 30px;
+
+  // border: 2px solid black; 
+
+  position: fixed; 
+  
+  bottom: 0px;
 }
 .topic-section {
   display: flex;
@@ -16,20 +19,81 @@
 
   height: 20%;
   width: 100%;
-  border: 2px solid black;
+  // border: 2px solid black;
 }
 .topic-text {
   margin: 0%;
   padding: 0%;
   height: 80%;
   width: 100%;
-  border: 2px solid black;
+  // border: 2px solid black;
 
 }
 }
 
 
 //ipad
-
+@media (max-width: 768px) {
+  .topic-page {
+    // top: 30px;
+  
+    // border: 2px solid black; 
+  
+    position: fixed; 
+    
+    bottom: 0px;
+  }
+  .topic-section {
+    display: flex;
+    flex-direction: column
+  
+  }
+  .topic-title {
+    position: absolute;
+  
+    height: 20%;
+    width: 100%;
+    // border: 2px solid black;
+  }
+  .topic-text {
+    margin: 0%;
+    padding: 0%;
+    height: 80%;
+    width: 100%;
+    // border: 2px solid black;
+  
+  }
+  }
 
 //desktop
+@media (min-width: 769px) {
+  .topic-page {
+    // top: 30px;
+  
+    // border: 2px solid black; 
+  
+    position: fixed; 
+    
+    bottom: 0px;
+  }
+  .topic-section {
+    display: flex;
+    flex-direction: column
+  
+  }
+  .topic-title {
+    position: absolute;
+  
+    height: 20%;
+    width: 100%;
+    // border: 2px solid black;
+  }
+  .topic-text {
+    margin: 0%;
+    padding: 0%;
+    height: 80%;
+    width: 100%;
+    // border: 2px solid black;
+  
+  }
+}

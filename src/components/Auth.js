@@ -9,32 +9,30 @@ const Auth = () =>  {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  
-  const handleSubmit = async (e) => {
+
+  const handleLogin =  (e) => {
     e.preventDefault();
-    const data = { 
-      email: email, 
-      password: password
-    }
-    
-    await API.post('/auth/login', data)
-    .then(res => {
-      console.log(res)
-    }).catch(err => {
-      console.log(err)
-    })
+  
     dispatch(
       login({
         email: email,
         password: password
       })
-    );
+      );
+      
+      setEmail("");
+      setPassword("");
 
-    setEmail("");
-    setPassword("");
-    
 
- }
+      API.post('/auth/login', {
+        email: email, password: password })
+      .then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      }) 
+      }
+      
   return (
     <div className="front-page">
     <div className="welcome-message">
@@ -42,7 +40,7 @@ const Auth = () =>  {
     Welcome! You have entered the world of RPG. Have Fun!
     </div></div>
     <form className="input-boxes"
-    onSubmit={(e) => handleSubmit(e)}>
+    onSubmit={(e) => handleLogin(e)}>
     <input
     onChange={(e) => setEmail(e.target.value)}
     label="email"
@@ -62,6 +60,7 @@ const Auth = () =>  {
     <button 
     className="enter-button"
     type="submit"
+    onClick={handleLogin}
     >Login</button>
     </form>
     </div>

@@ -9,9 +9,9 @@ const CharacterDisplay = () => {
 
   return (
     <div className="character-display">
-    <div className="character-display-title">Characters</div>
+    <div className="character-display-title">Characters:</div>
     <ul className="character-list">
-      <li>{renderedCharacter}</li>
+      {renderedCharacter}
       </ul>
     </div>
   )

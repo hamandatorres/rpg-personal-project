@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { login } from '../redux/userSlice';
+import { addUser } from '../redux/userSlice';
 
 
 
 const Register = () =>  {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
- const handleSubmit = (e) => {
+ const handleRegister = (e) => {
    e.preventDefault();
    
   dispatch(
-    login({
-      username: username,
+    addUser({
+      email: email,
       password: password,
     })
   );
-  setUsername("");
+  setEmail("");
   setPassword("")
  }
   return (
@@ -27,9 +27,9 @@ const Register = () =>  {
     Welcome! You have entered the world of RPG. Have Fun!
     </div></div>
     <form className="input-boxes"
-    onSubmit={(e) => handleSubmit(e)}>
+    onSubmit={(e) => handleRegister(e)}>
     <input
-    onChange={(e) => setUsername(e.target.value)}
+    onChange={(e) => setEmail(e.target.value)}
     className="login-input"
     type="text"
     placeholder="Username"
