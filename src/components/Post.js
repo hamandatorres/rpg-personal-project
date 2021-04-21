@@ -4,10 +4,10 @@ import Topic from './Topic'
 
 const Post = props => {
   return (
-    <>
+    <div>
     <h1>Post</h1>
     <Topic />
-    </>
+    </div>
   )
 }
 

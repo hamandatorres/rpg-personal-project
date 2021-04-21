@@ -9,7 +9,7 @@ const CharacterDisplay = () => {
 
   return (
     <div className="character-display">
-    <a className="character-display-title">Characters</a>
+    <div className="character-display-title">Characters</div>
     <ul className="character-list">
       <li>{renderedCharacter}</li>
       </ul>

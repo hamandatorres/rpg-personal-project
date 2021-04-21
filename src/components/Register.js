@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
-import { login, addUser } from '../redux/userSlice';
-import { selectUser } from '../redux/userSlice';
+import { useDispatch } from 'react-redux';
+import { login } from '../redux/userSlice';
 
 
 
@@ -10,7 +8,6 @@ const Register = () =>  {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
-  const user = useSelector(selectUser);
  const handleSubmit = (e) => {
    e.preventDefault();
    
@@ -25,9 +22,10 @@ const Register = () =>  {
  }
   return (
     <div className="front-page">
-    <div className="welcome-message"><a>
+    <div className="welcome-message">
+      <div>
     Welcome! You have entered the world of RPG. Have Fun!
-    </a></div>
+    </div></div>
     <form className="input-boxes"
     onSubmit={(e) => handleSubmit(e)}>
     <input

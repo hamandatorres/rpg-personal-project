@@ -1,6 +1,4 @@
 import React from 'react';
-import User from './User'
-import Character from './Character'
 
 const Topic = () => {
   return (

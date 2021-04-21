@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { addCharacter, showCharacter } from '../redux/characterSlice';
-import { useDispatch, useSelector} from 'react-redux';
-import { selectCharacter } from '../redux/characterSlice'
+import { addCharacter } from '../redux/characterSlice';
+import { useDispatch} from 'react-redux';
 
 
 const Characters = () => {
@@ -10,7 +9,6 @@ const Characters = () => {
   const [job, setJob] = useState("");
   const [age, setAge] = useState("");
   const dispatch = useDispatch()
-  const character = useSelector(selectCharacter)
   const handleSubmit = (e) => {
     e.preventDefault();
   dispatch(

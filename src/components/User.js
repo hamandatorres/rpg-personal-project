@@ -3,10 +3,16 @@ import CharacterDisplay from './CharacterDisplay'
 import Character from './Character'
 
 
+
 const User = () => {
+
   return (
     <div className="profile-page">
-    <a className="profile-title">User</a>
+      
+    <div className="profile-title">
+      Welcome! 
+      <span className="user_name">{}</span>
+    </div>
     <CharacterDisplay/>
     <Character />
     </div>
