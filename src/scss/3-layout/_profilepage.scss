@@ -16,6 +16,15 @@
   width: 100%;
   // border: 2px solid black;
 }
+.reframe {
+  height: 100px;
+  width: 150px;
+  overflow: hidden;
+}
+.reframe img {
+  height: auto;
+  width: 150px;
+}
 }
 
 //ipad
@@ -33,7 +42,15 @@
   width: 100%;
   // border: 2px solid black;
 }
-
+.reframe {
+  height: 100px;
+  width: 150px;
+  overflow: hidden;
+}
+.reframe img {
+  height: auto;
+  width: 150px;
+}
 
 }
 
@@ -68,4 +85,20 @@
     margin: 10px;
     display: flex;
   }
+  .reframe {
+    height: 100px;
+    width: 150px;
+    overflow: hidden;
+  }
+  .reframe img {
+    height: auto;
+    width: 150px;
+  }
+  .aws-image-page {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: 2px solid black;
+  }
 }
+

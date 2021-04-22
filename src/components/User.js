@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import CharacterDisplay from './CharacterDisplay';
 import Character from './Character';
+import AwsImage from './AwsImage';
 
 
 
@@ -20,6 +21,9 @@ const User = () => {
     </div>
     <div className="character-box">
     <Character />
+    <div>
+      <AwsImage />
+    </div>
     </div>
     </div>
   )
