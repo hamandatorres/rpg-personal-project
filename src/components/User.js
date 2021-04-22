@@ -1,16 +1,19 @@
 import React from 'react';
-import CharacterDisplay from './CharacterDisplay'
-import Character from './Character'
+import { useSelector } from 'react-redux';
+import CharacterDisplay from './CharacterDisplay';
+import Character from './Character';
 
 
 
 const User = () => {
-
+  const User = useSelector((state) => state.user.user.email)
   return (
     <div className="profile-page">
     <div className="profile-title">
       Welcome! 
-      <span className="user_name">Player</span>
+  
+        {User} 
+   
     </div>
     <div className="character-display-box">
     <CharacterDisplay/>

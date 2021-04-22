@@ -30,12 +30,14 @@ const Register = () =>  {
     onSubmit={(e) => handleRegister(e)}>
     <input
     onChange={(e) => setEmail(e.target.value)}
+    value={email}
     className="login-input"
     type="text"
     placeholder="Username"
     />
     <input
     onChange={(e) => setPassword(e.target.value)}
+    value={password}
     className="login-input"
     type="password"
     placeholder="Password"

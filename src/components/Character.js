@@ -9,8 +9,10 @@ const Characters = () => {
   const [job, setJob] = useState("");
   const [age, setAge] = useState("");
   const dispatch = useDispatch()
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    e.target.reset();
   dispatch(
     addCharacter({
       name: name,

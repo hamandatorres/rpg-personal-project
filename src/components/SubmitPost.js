@@ -5,6 +5,7 @@ import React from 'react';
 const SubmitPost = () => {
 const handleTopicPost = (e) => {
     e.preventDefault();
+    e.target.reset();
   }
   return (
     <div className="submit-box">

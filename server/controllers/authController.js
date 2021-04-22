@@ -1,11 +1,12 @@
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+
 
 module.exports = {
   register: async (req, res) => {
     const db = req.app.get('db')
     const { email, password } = req.body
-
-  const [ existingUser ] = await db.auth.get_user_by_email(email)
+    const [ existingUser ] = await db.auth.get_user_by_email(email)
 
   if (existingUser) {
     return res.status(409).send('User already exists')
@@ -17,6 +18,8 @@ module.exports = {
   delete newUser.hash
 
   req.session.user = newUser
+  const accessToken = jwt.sign(newUser, process.env.ACCESS_TOKEN_SECRET)
+  res.json({ accessToken: accessToken })
 
   res.status(200).send(req.session.user)
   },
@@ -37,6 +40,8 @@ module.exports = {
     delete existingUser.hash
 
     req.session.user = existingUser
+    const accessToken = jwt.sign(existingUser, process.env.ACCESS_TOKEN_SECRET)
+    res.json({ accessToken: accessToken })
 
     res.status(200).send(req.session.user)
   },
