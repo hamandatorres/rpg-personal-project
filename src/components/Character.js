@@ -33,7 +33,7 @@ const Characters = () => {
     onSubmit={(e) => handleSubmit(e)}
     className="character-form">
       <div>
-      <label for="name">
+      <label htmlFor="name">
       Name
       </label>
       <input 
@@ -44,7 +44,7 @@ const Characters = () => {
       type="text" />
       </div>
       <div>
-      <label for="race">
+      <label htmlFor="race">
         Race
       </label>
       <input
@@ -55,7 +55,7 @@ const Characters = () => {
       type="text"/>
       </div>
       <div>
-      <label for="job">
+      <label htmlFor="job">
         Job
       </label>
       <input
@@ -66,7 +66,7 @@ const Characters = () => {
       type="text"/>
       </div>
       <div>
-      <label for="age">
+      <label htmlFor="age">
         Age
       </label>
       <input

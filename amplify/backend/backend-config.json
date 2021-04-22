@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "rpgppbd277918": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "imagebucketrpg": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

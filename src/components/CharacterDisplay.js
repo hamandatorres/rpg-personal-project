@@ -10,7 +10,7 @@ const CharacterDisplay = () => {
   return (
     <div className="character-display">
     <div className="character-display-title">Characters:</div>
-    <ul className="character-list">
+    <ul key="renderedCharacter" className="character-list">
       {renderedCharacter}
       </ul>
     </div>

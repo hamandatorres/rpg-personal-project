@@ -2,7 +2,7 @@ GET http://localhost:4000/api/topics
 
 ###
 
-POST http://localhost:4000/auth/register
+POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
@@ -12,17 +12,34 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:4000/auth/login
+POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 
 {
-  "email":"lacey",
-  "password":"lacey"
+  "email":"carlos",
+  "password":"carlos"
 }
 
 ###
 
-GET http://localhost:4000/api/topics
+GET http://localhost:5000/api/topics
 Authorization: Bearer
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJlbWFpbCI6ImNhcmxvcyIsImlhdCI6MTYxOTA3MDQxMX0.pYY1xSGgYXs2msron5hR3wONFDvGHpmsE0vWM-dmxOw
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJlbWFpbCI6ImNhcmxvcyIsImlhdCI6MTYxOTExMTM2NywiZXhwIjoxNjE5MTExMzgyfQ.-8aoJa5sDcGho_6jB0TN-rGo474MHwZxQVGeuvN5YsQ
+###
+
+POST http://localhost:5000/token
+Content-Type: application/json
+
+{
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJlbWFpbCI6ImNhcmxvcyIsImlhdCI6MTYxOTExMTM2N30.SEZGPh0hLqw0QI3DdcZQcn0_dd0Tpkn9lUuMxJBWl_I"
+}
+
+###
+
+DELETE http://localhost:5000/logout
+Content-Type: application/json
+
+{
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJlbWFpbCI6ImNhcmxvcyIsImlhdCI6MTYxOTExMDU3MH0.ptGjhejeGcgFYwXGilX27gnTfTBgwVkihyyCsXbFKGk"
+}

@@ -15,18 +15,7 @@ const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
 
 app.use(express.json());
 
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Access-Control-Allow-Headers', '*');
-//   if(req.method === 'OPTIONS') {
-//     res.header('Access-Control-Allow-Methods', 'PUT, POST, MATCH, DELETE, GET')
-//     return res.status(200).json({})
-//   }
-// })
-// app.get('api/topics', authenticateToken, (req, res) => {
-//   res.json(topics.filter(topics => topics.email === req.user.name))
 
-// })
 app.use(
   session({
     resave: false,
@@ -37,6 +26,9 @@ app.use(
     }
   })
 )
+
+app.delete('/logout', authCtrl.deleteToken)
+app.post('/token', authCtrl.refreshToken);
 // auth
 app.post('/auth/register', authCtrl.register);
 app.post('/auth/login', authCtrl.login);
