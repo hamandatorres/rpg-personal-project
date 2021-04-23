@@ -12,9 +12,7 @@ const User = () => {
     <div className="profile-page">
     <div className="profile-title">
       Welcome! 
-  
         {User} 
-   
     </div>
     <div className="character-display-box">
     <CharacterDisplay/>

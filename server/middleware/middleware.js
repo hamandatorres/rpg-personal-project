@@ -16,5 +16,4 @@ authenticateToken(req, res, next) {
     next()
   })
 }
-
 }

@@ -35,7 +35,7 @@ console.log("result: ", result)
       {
         images.map(image => (
           <ul key={image} className="uploaded-images">
-          <img className="reframe" src={image} key={image} />
+          <img className="reframe" alt='' src={image} key={image} />
           </ul>
         ))
       }

@@ -9,12 +9,17 @@ const characterCtrl = require('./controllers/userCharacterController');
 const topicCtrl = require('./controllers/topicController')
 const postCtrl = require('./controllers/postController')
 const skillsCtrl = require('./controllers/skillsController')
+const path = require('path')
 
 const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
 
 
 app.use(express.json());
 
+app.use(express.static(__dirname + '/../build'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 app.use(
   session({
