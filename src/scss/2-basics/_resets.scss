@@ -1,12 +1,18 @@
 
 * {
   font-family: $primary-font;
+  line-height: 1.5;
+
 }
 
+.App {
+  // width: auto;
+}
 body {
   box-sizing: content-box;
-  display: flex;
+  // display: flex;
   margin: 0%;
   padding: 0%;
+  // width: 100vw;
  
 }

@@ -10,10 +10,8 @@
   background-color: #555;
 }
 .navbar {
-  // height: 5%;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   position: fixed;
   top: 0%;
   justify-content: space-between;
@@ -99,7 +97,6 @@
 
 
  .navbar-links ul {
-      // width: 100%;
       flex-direction: column;
       text-align: center;
       padding: .5rem 1rem;
