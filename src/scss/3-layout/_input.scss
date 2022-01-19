@@ -1,56 +1,63 @@
+@media (min-width:500px) {
 .front-page {
-  position: absolute;
+  align-items: center;
   border: 2px solid blue;
-  top: 20%;
   display: block;
   justify-content: space-around;
-  align-items: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
 }
 .welcome-message {
-  width: 50%;
-  padding: 10px;
   border: 2px solid black;
+  // padding: 10px;
+  margin: 10px;
+  width: 50%;
 }
 .welcome-message a {
+  border: 2px solid black;
   font-family: $primary-font;
   font-size: larger;
-  border:10px solid black;
 }
 .input-boxes {
+  align-items:center;
+  border: 2px solid blue;
+  display: block;
   font-family: $primary-font;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  position:relative;
+  margin: 10px;
+  width: 50%;
+
 }
 .login-input {
   margin: 10px;
-  width: auto;
+  width: 50%;
 }
 
 .links {
   padding: 10px;
 }
-
+}
 //mobile
 @media (max-width: 500px) {
-
   .front-page {
-    top: 5%;
+    align-items: center;
     display: block;
     justify-content: space-around;
-    align-items: center;
+    position: absolute;
+    margin: 10px;
+    top: 10%;
 }
   .welcome-message {
   display: block;
-  width: auto;
   float:none;
+  width: auto;
 }
   .input-boxes {
-  height: 50%;
-  font-family: $primary-font;
   display: block;
   flex-direction: column;
+  font-family: $primary-font;
+  height: 50%;
 }
 .login-input {
   display: block;
